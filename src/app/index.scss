@@ -80,7 +80,6 @@ section.jumbotron {
 }
 
 .md-toolbar-tools {
-    background: $brown;
 
 }
 
@@ -102,6 +101,11 @@ md-list {
   padding: 0 0 0 0;
 }
 
+.play-button {
+  a {
+    text-decoration: none;
+  }
+}
 
 /**
  *  Do not remove the comment below. It's the markers used by gulp-inject to inject
