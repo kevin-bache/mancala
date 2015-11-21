@@ -3,9 +3,10 @@
 
   angular
     .module('mancala')
-    .controller('ChaptersController', ChaptersController);
+    .controller('FiveController', FiveController);
 
   /** @ngInject */
-  function ChaptersController() {
+  function FiveController() {
   }
+
 })();

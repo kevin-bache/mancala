@@ -2,7 +2,5 @@
   'use strict';
 
   angular
-    .module('mancala')
-    .constant('moment', moment);
-
+    .module('mancala');
 })();
