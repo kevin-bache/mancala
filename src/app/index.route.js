@@ -15,7 +15,7 @@
         controllerAs: 'main'
       })
     .state('intro', {
-        url: '/',
+        url: '/intro',
         templateUrl: 'app/intro/intro.html',
         controller: 'IntroController',
         controllerAs: 'intro'
@@ -24,13 +24,13 @@
         url: '/chapters',
         templateUrl: 'app/main/chapters.html',
         controller: 'ChaptersController',
-        controllerAs: 'chapter'
+        controllerAs: 'chapters'
       })
       .state('chapter', {
         url: '/chapters/:chapter',
         templateUrl: 'app/main/chapter.html',
         controller: 'ChapterController',
-        controllerAs: 'int'
+        controllerAs: 'chapter'
       })
       .state('game', {
         url: '/',
