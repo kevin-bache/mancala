@@ -8,37 +8,57 @@
   /** @ngInject */
   function routerConfig($stateProvider, $urlRouterProvider) {
     $stateProvider
-        .state('main', {
+      .state('chapters', {
         url: '/',
-        templateUrl: 'app/main/main.html',
-        controller: 'MainController',
-        controllerAs: 'main'
+        templateUrl: 'app/chapters/chapters.html',
+        controller: 'ChaptersController',
+        controllerAs: 'chapters'
       })
-    .state('intro', {
+      .state('intro', {
         url: '/intro',
         templateUrl: 'app/intro/intro.html',
         controller: 'IntroController',
         controllerAs: 'intro'
       })
-      .state('chapters', {
-        url: '/chapters',
-        templateUrl: 'app/main/chapters.html',
-        controller: 'ChaptersController',
-        controllerAs: 'chapters'
+    .state('two', {
+        url: '/two',
+        templateUrl: 'app/two/two.html',
+        controller: 'TwoController',
+        controllerAs: 'two'
       })
-      .state('chapter', {
-        url: '/chapters/:chapter',
-        templateUrl: 'app/main/chapter.html',
-        controller: 'ChapterController',
-        controllerAs: 'chapter'
+        .state('three', {
+        url: '/three',
+        templateUrl: 'app/three/three.html',
+        controller: 'ThreeController',
+        controllerAs: 'three'
       })
-      .state('game', {
+      .state('four', {
+        url: '/four',
+        templateUrl: 'app/four/four.html',
+        controller: 'FourController',
+        controllerAs: 'four'
+      })
+      .state('five', {
+        url: '/five',
+        templateUrl: 'app/five/five.html',
+        controller: 'FiveController',
+        controllerAs: 'five'
+      })
+            .state('six', {
+        url: '/six',
+        templateUrl: 'app/six/six.html',
+        controller: 'SixController',
+        controllerAs: 'six'
+      })
+
+/*      .state('game', {
         url: '/',
         templateUrl: 'app/game/game.html',
         controller: 'GameController',
         controllerAs: 'game'
       })
   
+  */
     $urlRouterProvider.otherwise('/');
   }
 

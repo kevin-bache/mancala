@@ -7,6 +7,8 @@
 
 @import url(http://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Roboto:400,700,700italic,400italic);
 
+@import 'globals/colors';
+
 @font-face {
   font-family: 'Material Icons';
   font-style: normal;
@@ -45,12 +47,13 @@
 }
 
 html {
-  font-family: 'Roboto Slab', serif;
+  font-family: 'Roboto', serif;
 }
 
 [layout=row] {
   flex-direction: row;
 }
+
 
 .browsehappy {
   margin: 0.2em 0;
@@ -76,19 +79,29 @@ section.jumbotron {
   }
 }
 
-.techs {
-  display: flex;
-  flex-flow: row wrap;
+.md-toolbar-tools {
+    background: $brown;
 
-  md-card {
-    width: 30%;
+}
 
-    img.pull-right {
-      float: right;
-      width: 100px;
-    }
+a.md-list-custom {
+  text-decoration: none;
+  display: block;
+
+  &:hover {
+  background: $lightBrown;
   }
 }
+
+.app-name {
+  padding-left: 0.5em;
+  font-family: 'Roboto Slab', serif;
+}
+
+md-list {
+  padding: 0 0 0 0;
+}
+
 
 /**
  *  Do not remove the comment below. It's the markers used by gulp-inject to inject
