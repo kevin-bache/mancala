@@ -11,7 +11,7 @@
                 seeds = seeds.concat("<li class=\"seed\"></li>");
             }
             seeds = seeds.concat('</ul>');
-            return stones === 0 ? '' : seeds + stones.toString();
+            return stones === 0 ? '' : seeds + "<div class=\"seeds-number\">" +stones.toString() + "</div>";
         };
 
         this.current_player_store.innerHTML = format(this.mancala.current_store);
@@ -29,13 +29,13 @@
      */
     Game.prototype.draw_stones = function (pit) {
         var format = function (stones) {
-             var seeds = "<ul>";
+           var seeds = "<ul>";
             for(var seed = 0; seed < stones; seed ++) {
                 seeds = seeds.concat("<li class=\"seed\"></li>");
             }
             seeds = seeds.concat('</ul>');
-            return stones === 0 ? '' : seeds + stones.toString();
-        };
+            return stones === 0 ? '' : seeds + "<div class=\"seeds-number\">" +stones.toString() + "</div>";
+         };
 
         if (pit === this.pits) {
             this.current_player_store.innerHTML = format(this.mancala.current_store);
