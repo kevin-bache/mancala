@@ -6,15 +6,20 @@
      */
     Game.prototype.draw_all_stones = function () {
         var format = function (stones) {
-            return stones === 0 ? '' : stones;
+            var seeds = "<ul>";
+            for(var seed = 0; seed < stones; seed ++) {
+                seeds = seeds.concat("<li class=\"seed\"></li>");
+            }
+            seeds = seeds.concat('</ul>');
+            return stones === 0 ? '' : seeds + stones.toString();
         };
 
-        this.current_player_store.textContent = format(this.mancala.current_store);
-        this.other_player_store.textContent = format(this.mancala.other_store);
-
+        this.current_player_store.innerHTML = format(this.mancala.current_store);
+        this.other_player_store.innerHTML = format(this.mancala.other_store);
         for (var pit = 0; pit < this.pits; pit++) {
-            this.current_player_pits[pit].textContent = format(this.mancala.current_pits[pit]);
-            this.other_player_pits[pit].textContent = format(this.mancala.other_pits[pit]);
+
+            this.current_player_pits[pit].innerHTML = format(this.mancala.current_pits[pit]);
+            this.other_player_pits[pit].innerHTML = format(this.mancala.other_pits[pit]);
         }
     };
 
@@ -24,18 +29,23 @@
      */
     Game.prototype.draw_stones = function (pit) {
         var format = function (stones) {
-            return stones === 0 ? '' : stones;
+             var seeds = "<ul>";
+            for(var seed = 0; seed < stones; seed ++) {
+                seeds = seeds.concat("<li class=\"seed\">seed</li>");
+            }
+            seeds = seeds.concat('</ul>');
+            return stones === 0 ? '' : seeds + stones.toString();
         };
 
         if (pit === this.pits) {
-            this.current_player_store.textContent = format(this.mancala.current_store);
+            this.current_player_store.innerHTML = format(this.mancala.current_store);
         } else if(pit === (this.pits * 2) + 1) {
-            this.other_player_store.textContent = format(this.mancala.other_store);
+            this.other_player_store.innerHTML = format(this.mancala.other_store);
         } else if (pit < this.pits) {
-            this.current_player_pits[pit].textContent = format(this.mancala.current_pits[pit]);
+            this.current_player_pits[pit].innerHTML = format(this.mancala.current_pits[pit]);
         } else if (pit > this.pits) {
             pit -= (parseInt(this.pits) + 1);
-            this.other_player_pits[pit].textContent = format(this.mancala.other_pits[pit]);
+            this.other_player_pits[pit].innerHTML = format(this.mancala.other_pits[pit]);
         }
     };
 

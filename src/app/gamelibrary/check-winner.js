@@ -30,13 +30,13 @@
         var pit;
 
         if (current_player_out && ! other_player_out) {
-            for (pit = 0; pit < 6; pit++) {
+            for (pit = 0; pit < this.pits; pit++) {
                 this.other_store += this.other_pits[pit];
                 this.other_pits[pit] = 0;
             }
 
         } else if (other_player_out && ! current_player_out) {
-            for (pit = 0; pit < 6; pit++) {
+            for (pit = 0; pit < this.pits; pit++) {
                 this.current_store += this.current_pits[pit];
                 this.current_pits[pit] = 0;
             }
