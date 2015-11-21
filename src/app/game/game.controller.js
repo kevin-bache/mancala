@@ -3,37 +3,46 @@
 
   angular
     .module('mancala')
-    .controller('MainController', MainController);
+    .controller('GameController', GameController);
 
   /** @ngInject */
-  function MainController($timeout, webDevTec, toastr) {
-    var vm = this;
+  function GameController($timeout, webDevTec) {
+        var game = new Game(Mancala);
+        game.load_game();
 
-    vm.awesomeThings = [];
-    vm.classAnimation = '';
-    vm.creationDate = 1448126341927;
-    vm.showToastr = showToastr;
+        game.init();
+        var waiting_for_move = true;
 
-    activate();
+        /**
+         * Initialize pit elements as
+         * @param {String}   player The player who the row belongs to
+         * @param {NodeList} row    The pit elements to initialize
+         */
+        var init_pits = function (player, row) {
+          var onclick = function () {
+            if (game.player === player && waiting_for_move) {
+              waiting_for_move = false;
+              var pit = parseInt(this.getAttribute('data-pit'));
+              if (!game.do_player_turn(pit)) {
+                waiting_for_move = true;
+              }
+            }
+          };
 
-    function activate() {
-      getWebDevTec();
-      $timeout(function() {
-        vm.classAnimation = 'rubberBand';
-      }, 4000);
-    }
+          for (var pit = 0; pit < row.length; pit++) {
+            row[pit].setAttribute('data-pit', pit);
+            row[pit].onclick = onclick;
+          }
+        };
 
-    function showToastr() {
-      toastr.info('Fork <a href="https://github.com/Swiip/generator-gulp-angular" target="_blank"><b>generator-gulp-angular</b></a>');
-      vm.classAnimation = '';
-    }
+        init_pits('one', document.querySelectorAll('.row.player-one .pit'));
+        init_pits('two', document.querySelectorAll('.row.player-two .pit'));
 
-    function getWebDevTec() {
-      vm.awesomeThings = webDevTec.getTec();
+        document.querySelector('.new-game').onclick = function () {
+          game.reset_game();
+          window.location.reload();
+        };
 
-      angular.forEach(vm.awesomeThings, function(awesomeThing) {
-        awesomeThing.rank = Math.random();
-      });
-    }
+  return game;
   }
 })();

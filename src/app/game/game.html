@@ -1,34 +1,33 @@
-<div layout="vertical" layout-fill>
+<div data-player="one">
+  <h1>Mancala</h1>
 
-  <md-content>
-    <header>
-      <acme-navbar creation-date="main.creationDate"></acme-navbar>
-    </header>
+  <div class="board">
+    <div class="player-two store"><p></p></div>
 
-    <section class="jumbotron">
-      <h1>'Allo, 'Allo!</h1>
-      <p class="lead">
-        <img src="assets/images/yeoman.png" alt="I'm Yeoman"><br>
-        Always a pleasure scaffolding your apps.
-      </p>
-      <md-button class="md-raised animated infinite" ng-class="main.classAnimation" ng-click="main.showToastr()">Splendid Toastr</md-button>
-      <p>
-        With ♥ thanks to the contributions of<acme-malarkey extra-values="['Yeoman', 'Gulp', 'Angular']"></acme-malarkey>
-      </p>
-    </section>
+    <div class="rows">
+      <div class="row player-two">
+        <div class="pit"><p>4</p></div>
+        <div class="pit"><p>4</p></div>
+        <div class="pit"><p>4</p></div>
+        <div class="pit"><p>4</p></div>
+        <div class="pit"><p>4</p></div>
+        <div class="pit"><p>4</p></div>
+      </div>
 
-    <div class="techs" layout-align="center">
-      <md-card ng-repeat="awesomeThing in main.awesomeThings | orderBy:'rank'">
-        <md-card-content>
-          <img class="pull-right" ng-src="assets/images/{{ awesomeThing.logo }}" alt="{{ awesomeThing.title }}">
-          <h3 class="md-title">{{ awesomeThing.title }}</h3>
-          <p>{{ awesomeThing.description }}</p>
-        </md-card-content>
-        <div class="md-action-buttons">
-          <md-button ng-href="{{ awesomeThing.url }}">Website</md-button>
-        </div>
-      </md-card>
+      <div class="row player-one">
+        <div class="pit"><p>4</p></div>
+        <div class="pit"><p>4</p></div>
+        <div class="pit"><p>4</p></div>
+        <div class="pit"><p>4</p></div>
+        <div class="pit"><p>4</p></div>
+        <div class="pit"><p>4</p></div>
+      </div>
     </div>
-  </md-content>
 
+    <div class="player-one store"><p></p></div>
+  </div>
+
+  <p class="status">It is player <span class="current-player">one</span>'s turn</p>
+
+  <button class="new-game">New Game</button>
 </div>

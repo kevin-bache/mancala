@@ -33,7 +33,7 @@
         controllerAs: 'int'
       })
       .state('game', {
-        url: '/',
+        url: '/game',
         templateUrl: 'app/game/game.html',
         controller: 'GameController',
         controllerAs: 'game'
