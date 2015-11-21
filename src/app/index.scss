@@ -131,15 +131,7 @@ h1 {
   background: url(../images/wood.png);
   border-radius: 20px;
 
-  &, p {
-    transform: rotate(0deg);
-    transition: transform 3s ease 0s;
-  }
 
-  [data-player="two"] &,
-  [data-player="two"] & p {
-    transform: rotate(180deg);
-  }
 }
 
 .rows {

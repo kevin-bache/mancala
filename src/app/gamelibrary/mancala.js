@@ -13,10 +13,10 @@ var Mancala = (function () {
 		this.other_pits = new Array();
 		this.current_pits = new Array();
 		this.pits = parseInt(game.pits);
-	
+		this.seeds = game.seeds
 		for(var nb = 0; nb < game.pits ; nb++ ) {
-			this.current_pits.push(4);
-			this.other_pits.push(4);
+			this.current_pits.push(parseInt(this.seeds));
+			this.other_pits.push(parseInt(this.seeds));
 		}
 	
 		//this.current_pits = [4, 4, 4, 4, 4, 4];

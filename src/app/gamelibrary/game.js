@@ -12,7 +12,7 @@ var Game = (function () {
 	 */
 	var Game = function (Mancala, current_player) {
 		this.pits = (localStorage.getItem('pits')) ? localStorage.getItem('pits') : 6;
-
+		this.seeds = (localStorage.getItem('seeds')) ? localStorage.getItem('seeds') : 4;
 		this.mancala = new Mancala(this);
 		this.player = current_player === 'two' ? 'two' : 'one';
 	};
