@@ -20,6 +20,7 @@ gulp.task('inject', ['scripts', 'styles'], function () {
     path.join(conf.paths.src, '/app/**/*.js'),
     path.join('!' + conf.paths.src, '/app/**/*.spec.js'),
     path.join('!' + conf.paths.src, '/app/**/*.mock.js'),
+     path.join('!' + conf.paths.src, '/app/gamelibrary/*.js')
   ])
   .pipe($.angularFilesort()).on('error', conf.errorHandler('AngularFilesort'));
 

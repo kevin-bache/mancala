@@ -56,8 +56,9 @@
         controller: 'SixController',
         controllerAs: 'six'
       })
-     .state('game', {
-        url: '/',
+
+      .state('game', {
+        url: '/game',
         templateUrl: 'app/game/game.html',
         controller: 'GameController',
         controllerAs: 'game'
