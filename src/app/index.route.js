@@ -63,6 +63,7 @@
         controllerAs: 'game'
       })
   
+  
     $urlRouterProvider.otherwise('/');
   }
 
