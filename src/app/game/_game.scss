@@ -1,0 +1,77 @@
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+.mancala-board {
+  width: 100%;
+  background: #534A45;
+  display: block;
+  overflow: hidden;
+  padding: 0 4em;
+}
+
+.store {
+  border-radius: 40px;
+  clear: both;
+  width: 100%;
+}
+
+.row {
+  width: 50%;
+  &.player-one {
+    float: left;
+
+  }
+  &.player-two {
+    float: right;
+  }
+}
+
+.store, .pit {
+  text-align: center;
+  cursor: default;
+  padding: 0.5em 1.5em;
+  display: block;
+
+  p {
+    cursor: inherit;
+    background: rgba(0,0,0,0.5);
+    border-radius: 15px;
+    padding: 1.2em;
+    display: block;
+    margin: 0 0;
+
+
+
+  }
+
+  p::selection {
+    background: transparent;
+  }
+}
+
+.pit {
+}
+
+[data-player="two"] .row.player-two .pit,
+[data-player="one"] .row.player-one .pit {
+  cursor: pointer;
+}
+
+[data-player="two"] .status,
+.store.player-two, .player-two .pit {
+  color: green;
+}
+
+[data-player="one"] .status,
+.store.player-one, .player-one .pit {
+  color: #0074D9;
+}
+
+/**
+ *  Do not remove the comment below. It's the markers used by gulp-inject to inject
+ *  all your sass files automatically
+ */
+// injector
+// endinjector

@@ -8,6 +8,8 @@
 @import url(http://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Roboto:400,700,700italic,400italic);
 
 @import 'globals/colors';
+@import 'game/game';
+
 
 @font-face {
   font-family: 'Material Icons';
@@ -88,10 +90,21 @@ a.md-list-custom {
   display: block;
 
   &:hover {
-  background: $lightBrown;
   }
 }
 
+.app-name {
+  padding-left: 0.5em;
+  font-family: 'Roboto Slab', serif;
+}
+md-list {
+}
+
+.fixed-play {
+  position: fixed;
+  right: 1em;
+  bottom: 1em;
+}
 
 /**
  *  Do not remove the comment below. It's the markers used by gulp-inject to inject
