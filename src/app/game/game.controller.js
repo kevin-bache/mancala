@@ -13,6 +13,7 @@
         $scope.pits = (localStorage.getItem('pits')) ? localStorage.getItem('pits') : 6;
         $timeout(function() {
           var game = new Game(Mancala);
+          game.reset_game();
           game.load_game();
      
           game.init();
