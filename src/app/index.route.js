@@ -57,14 +57,14 @@
         controllerAs: 'six'
       })
 
-      .state('game', {
+/*      .state('game', {
         url: '/game',
         templateUrl: 'app/game/game.html',
         controller: 'GameController',
         controllerAs: 'game'
       })
   
-  
+  */
     $urlRouterProvider.otherwise('/');
   }
 
