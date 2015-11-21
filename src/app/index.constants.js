@@ -4,7 +4,7 @@
 
   angular
     .module('mancala')
-   // .constant('malarkey', malarkey)
+    .constant('malarkey', malarkey)
     .constant('moment', moment);
 
 })();
