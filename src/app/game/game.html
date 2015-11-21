@@ -1,25 +1,26 @@
 <div data-player="one">
-  <h1>Mancala</h1>
+  <div class = "mancala-board">
 
-  <div class="board">
     <div class="player-two store"><p></p></div>
 
-    <div class="rows">
+      <div class="rows">
 
-      <div class="row player-two">
-        <div ng-repeat="n in range(pits) track by $index" class="pit"><p>4</p></div>
-        
-      </div>
+        <div class="row player-two">
+          <div ng-repeat="n in range(pits) track by $index" class="pit"><p>4</p>
+          </div>
+        </div>
 
-      <div class="row player-one">
-       <div ng-repeat="n in range(pits) track by $index" class="pit"><p>4</p></div>
-      </div>
+        <div class="row player-one">
+          <div ng-repeat="n in range(pits) track by $index" class="pit"><p>4</p>
+          </div>
+        </div>
     </div>
-
-    <div class="player-one store"><p></p></div>
   </div>
+
+<div class="player-one store"><p></p></div>
 
   <p class="status">It is player <span class="current-player">one</span>'s turn</p>
 
   <button class="new-game">New Game</button>
+  </div>
 </div>
