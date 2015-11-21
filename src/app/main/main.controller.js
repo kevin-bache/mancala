@@ -6,6 +6,6 @@
     .controller('MainController', MainController);
 
   /** @ngInject */
-  function MainController() {}
-  
+  function MainController() {
+  }
 })();
