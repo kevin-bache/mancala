@@ -5,22 +5,14 @@
     <div class="player-two store"><p></p></div>
 
     <div class="rows">
+
       <div class="row player-two">
-        <div class="pit"><p>4</p></div>
-        <div class="pit"><p>4</p></div>
-        <div class="pit"><p>4</p></div>
-        <div class="pit"><p>4</p></div>
-        <div class="pit"><p>4</p></div>
-        <div class="pit"><p>4</p></div>
+        <div ng-repeat="n in range(pits) track by $index" class="pit"><p>4</p></div>
+        
       </div>
 
       <div class="row player-one">
-        <div class="pit"><p>4</p></div>
-        <div class="pit"><p>4</p></div>
-        <div class="pit"><p>4</p></div>
-        <div class="pit"><p>4</p></div>
-        <div class="pit"><p>4</p></div>
-        <div class="pit"><p>4</p></div>
+       <div ng-repeat="n in range(pits) track by $index" class="pit"><p>4</p></div>
       </div>
     </div>
 

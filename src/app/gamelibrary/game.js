@@ -11,6 +11,8 @@ var Game = (function () {
 	 * @constructor
 	 */
 	var Game = function (Mancala, current_player) {
+		this.pits = (localStorage.getItem('pits')) ? localStorage.getItem('pits') : 6;
+
 		this.mancala = new Mancala(this);
 		this.player = current_player === 'two' ? 'two' : 'one';
 	};
