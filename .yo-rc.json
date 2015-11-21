@@ -9,10 +9,6 @@
           "module": "ngAnimate"
         },
         {
-          "key": "cookies",
-          "module": "ngCookies"
-        },
-        {
           "key": "touch",
           "module": "ngTouch"
         },
