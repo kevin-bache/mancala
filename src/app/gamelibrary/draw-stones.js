@@ -13,7 +13,13 @@
             seeds = seeds.concat('</ul>');
             return stones === 0 ? '' : seeds + "<div class=\"seeds-number\">" +stones.toString() + "</div>";
         };
-
+        var sound = (localStorage.getItem('sound') !== 'null') ? localStorage.getItem('sound') : 'none';
+        if(sound != 'none'){
+            var audio = new Audio('/assets/sounds/' + sound +'.mp3');
+            audio.play();
+        }
+ 
+    
         this.current_player_store.innerHTML = format(this.mancala.current_store);
         this.other_player_store.innerHTML = format(this.mancala.other_store);
         for (var pit = 0; pit < this.pits; pit++) {
