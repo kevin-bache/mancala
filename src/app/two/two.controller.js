@@ -6,7 +6,10 @@
     .controller('TwoController', TwoController);
 
   /** @ngInject */
-  function TwoController() {
+  function TwoController($scope) {
+  	$scope.done = function() {
+  		localStorage.setItem('chapter', 3);
+  	}
   }
 
 })();

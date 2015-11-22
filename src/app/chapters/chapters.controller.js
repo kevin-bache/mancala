@@ -6,6 +6,35 @@
     .controller('ChaptersController', ChaptersController);
 
   /** @ngInject */
-  function ChaptersController() {
+  function ChaptersController($scope) {
+    var chapter = localStorage.getItem('chapter');
+    if(chapter == null) {
+      chapter = 1;
+    }
+    $scope.chapter = chapter;
+  	$scope.active = function(number) {
+  		var chapter = localStorage.getItem('chapter');
+  		if(chapter == null) {
+  			chapter = 1;
+  		}
+  		if(chapter < number){
+  			return 'unavailable incomplete';
+  		}
+  		else if(chapter == number){
+  			return "incomplete"
+  		}
+  		else {
+  			return '';
+  		}
+  	}
+    $scope.show = function(){
+       var chapter = localStorage.getItem('chapter');
+       if(chapter > 6) {
+         return true
+       }
+       else {
+         return false
+       }
+    }
   }
 })();
