@@ -1,15 +1,36 @@
-<h1>Chapter Three</h1>
- 
-<md-content layout-padding layout="row" layout-sm="column">
-	<md-input-container>
-	  <label>Number of Pits</label>
-	  <input ng-model="game.pits">
-	</md-input-container> 
-	<md-input-container>
-	  <label>Number of Seeds</label>
-	  <input ng-model="game.seeds">
-	</md-input-container> 	
-</md-content>
+<md-card>
+  <md-card-content>
+    <h2>Variables</h2>
+    <p>In programming variables are symbols which are used to store or represent information.</p>
+    <p>Variables are called variables because the information they represent can change.</p>
+    <p>Change the game variables for the number of pits and seeds in your game, and see how it changes your game.</p>
+  </md-card-content>
+</md-card>
 
-<a class = "fixed-play" ng-href = "/#/game" ng-click='done()'><md-button class="md-fab" aria-label="Play game">	<md-icon md-svg-src="assets/images/play.svg"></md-icon></md-button></a>
- 
+<md-card>
+  <md-card-content>
+    <strong>Pits</strong>
+    <md-input-container>
+      <label>Number of Pits</label>
+      <input ng-model="game.pits">
+    </md-input-container>
+  </md-card-content>
+</md-card>
+
+<md-card>
+  <md-card-content>
+    <strong>Seeds</strong>
+    <md-input-container>
+      <label>Number of Seeds</label>
+      <input ng-model="game.seeds">
+    </md-input-container>
+  </md-card-content>
+</md-card>
+
+
+
+<a class="fixed-play" ng-href="/#/game" ng-click='done()'>
+  <md-button class="md-fab" aria-label="Play game">
+    <md-icon md-svg-src="assets/images/play.svg"></md-icon>
+  </md-button>
+</a>

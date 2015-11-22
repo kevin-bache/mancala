@@ -1,13 +1,25 @@
-<h1>Chapter Five</h1>
+<md-card>
+  <md-card-content>
+    <h2>Sound</h2>
+    <p>Adding sound to your game helps bring your game to life. Choose from the sounds below to customize how your games sounds.</p>
+  </md-card-content>
+</md-card>
 
-
+<md-card>
+  <md-card-content>
+    <strong>Select a sound</strong>
     <md-radio-group ng-model="game.sound">
       <md-radio-button value="seed_sound" class="md-primary">Seed</md-radio-button>
       <md-radio-button value="seed_crystal_jar">Seed on crystal </md-radio-button>
       <md-radio-button value="shotgun">Ting</md-radio-button>
       <md-radio-button value="donkey">Donkey</md-radio-button>
-       <md-radio-button value="false">None</md-radio-button>
-  
+      <md-radio-button value="false">None</md-radio-button>
     </md-radio-group>
+  </md-card-content>
+</md-card>
 
-   <a class = "fixed-play" ng-href = "/#/game" ng-click='done()'><md-button class="md-fab" aria-label="Play game">	<md-icon md-svg-src="assets/images/play.svg"></md-icon></md-button></a>
+<a class="fixed-play" ng-href="/#/game" ng-click='done()'>
+  <md-button class="md-fab" aria-label="Play game">
+    <md-icon md-svg-src="assets/images/play.svg"></md-icon>
+  </md-button>
+</a>

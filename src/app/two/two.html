@@ -1,29 +1,32 @@
-<md-tabs md-dynamic-height class="md-primary">
-  <md-tab class="md-primary" label="Colors">
-    <md-card>
-      <md-card-content class="slide-1">
-        <div md-color-picker value="color"></div>
+<md-card>
+  <md-card-content>
+    <h2>Design</h2>
+    <p>Design isn't simply about making your app look nice. Colors are a meaningful form of communication.</p>
+    <p>Use the selectors below to choose colors which make your game both easy to use and look beautiful.</p>
+  </md-card-content>
+</md-card>
 
-      </md-card-content>
-    </md-card>
+<md-card>
+  <md-card-content class="slide-1">
+    <strong>The Game Board</strong>
+    <div md-color-picker value="color"></div>
 
-  </md-tab>
-
-  <md-tab class="slide-2 md-accent" label="Sprites">
-    <md-card>
-
-      <md-card-content>
-        <div md-color-picker value="sprite1"></div>
-        <div md-color-picker value="sprite2"></div>
-        <div md-color-picker value="sprite3"></div>
-        <div md-color-picker value="sprite4"></div>
+  </md-card-content>
+</md-card>
 
 
-      </md-card-content>
-    </md-card>
-  </md-tab>
-</md-tabs>
+<md-card>
 
+  <md-card-content>
+    <strong>The Seeds</strong>
+    <div md-color-picker value="sprite1"></div>
+    <div md-color-picker value="sprite2"></div>
+    <div md-color-picker value="sprite3"></div>
+    <div md-color-picker value="sprite4"></div>
+
+
+  </md-card-content>
+</md-card>
 <a class="fixed-play" ng-href="/#/game" ng-click='done()'>
   <md-button class="md-fab" aria-label="Play game">
     <md-icon md-svg-src="assets/images/play.svg"></md-icon>
