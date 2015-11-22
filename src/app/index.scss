@@ -24,6 +24,11 @@
        url(../../bower_components/material-design-iconfont/iconfont/MaterialIcons-Regular.ttf) format('truetype');
 }
 
+.max-container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
 ol li {
   margin-bottom: 0.5em;
 }
@@ -37,6 +42,8 @@ md-tabs {
     color: white !important;
   }
 }
+
+
 
 div.pad { 
   padding: 0em 0em 0em 1em;
