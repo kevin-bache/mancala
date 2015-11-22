@@ -60,8 +60,6 @@
   float: left;
   width: 50%;
 
-    .pit {
-    }
 
    .seeds-number {
       transform: rotate(-90deg) translateX(-20px);
@@ -73,6 +71,8 @@
   }
   
   &.player-two {
+ display: flex;
+  flex-flow: column-reverse;
 
   float: left;
   width: 50%;
