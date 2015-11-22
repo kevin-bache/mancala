@@ -8,8 +8,9 @@
   background: #534A45;
   display: block;
   overflow: hidden;
-  padding: 1em 4em;
+  padding: 2em 4em 6em 4em;
   max-width: 600px;
+  min-height: 720px;
   margin: 0 auto;
   position: relative;
 
@@ -20,6 +21,20 @@
   border-radius: 40px;
   clear: both;
   width: 100%;
+  &.player-one {
+     .seeds-number {
+      transform: translateY(70px);
+      color: white;
+    }
+  }
+
+  &.player-two {
+    .seeds-number {
+      transform: translateY(-30px);
+      color: white;
+    } 
+  }
+ 
 }
 
 .rows {
@@ -63,10 +78,20 @@
       width: 60px;
       right: -2em;
       color: white;
-      display: block;
+
     }
   }
 }
+
+.status {
+  position: fixed;
+  color: white !important;
+  bottom: 8px;
+  left: 1.5em;
+  background: rgba(0,0,0,0.5);
+  display: block;
+  padding: 1em;
+  }
 
 .store, .pit {
   text-align: center;
@@ -91,33 +116,157 @@
       height: 0px;
       li {
         background: url(/assets/images/seed-sprite.png);
-        width: 29px;
+        width: 27px;
         height: 30px;
         background-size: cover;
+
         position: absolute;
         top: 0px;
         left: 0px;
         
         &:nth-child(1) {
-          left: 20px;
+
+          &.seed-rand-1 {
+            transform: rotate(66deg);
+            left: 8%;
+            top: 8px;
+
+          }
+
+          &.seed-rand-2 {
+            transform: rotate(20deg);
+            left: 27%;
+            top: 22px;
+          }
+          
+          &.seed-rand-3 {
+            transform: rotate(189deg);
+            left: 40%;
+            top: 40%;
+          }
+
+          &.seed-rand-4 {
+            transform: rotate(96deg);
+            left: 60%;
+            top: 15px;
+          }
         }
 
         &:nth-child(2) {
-          left: 40px;
+          left: 30px;
+          background-position:-25px 0px;
+
+          &.seed-rand-1 {
+            transform: rotate(21deg);
+            left: 13%;
+            top: 22px;
+          }
+
+          &.seed-rand-2 {
+            transform: rotate(65deg);
+            left: 65%;
+            top: 18px;
+          }
+          
+          &.seed-rand-3 {
+            transform: rotate(219deg);
+            left: 33%;
+            top: 19px;
+          }
+
+          &.seed-rand-4 {
+            transform: rotate(99deg);
+            left: 10%;
+            top: 27px;
+          }
+
         }
 
         &:nth-child(3) {
-          left: 40px;
-          top: 30px;
+          left: 30px;
+          top: 20px;
+          background-position:-49px 0px;
+          &.seed-rand-1 {
+            transform: rotate(34deg);
+            left: 33%;
+            top: 29px;
+          }
+
+          &.seed-rand-2 {
+            transform: rotate(145deg);
+            left: 47%;
+            top: 27px;
+          }
+          
+          &.seed-rand-3 {
+            transform: rotate(19deg);
+            left: 23%;
+            top: 9px;
+          }
+
+          &.seed-rand-4 {
+            transform: rotate(135deg);
+            left: 6%;
+            top: 7px;
+          }
         }
 
+        &:nth-child(4) {
+          background-position:-25px 0px;
+           &.seed-rand-1 {
+            transform: rotate(127deg);
+            left: 24%;
+            top: 8px;
+          }
 
+          &.seed-rand-2 {
+            transform: rotate(201deg);
+            left: 59%;
+            top: 19px;
+          }
+          
+          &.seed-rand-3 {
+            transform: rotate(155deg);
+            left: 26%;
+            top: 19px;
+          }
+
+          &.seed-rand-4 {
+            transform: rotate(30deg);
+            left: 30%;
+            top: 4px;
+          }
+
+        &:nth-child(5) {
+          background-position:-69px 0px;
+           &.seed-rand-1 {
+            transform: rotate(12deg);
+            left: 13%;
+            top: 22px;
+          }
+
+          &.seed-rand-2 {
+            transform: rotate(139deg);
+            left: 7%;
+            top: 18px;
+          }
+          
+          &.seed-rand-3 {
+            transform: rotate(219deg);
+            left: 23%;
+            top: 9px;
+          }
+
+          &.seed-rand-4 {
+            transform: rotate(124deg);
+            left: 30%;
+            top: 18px;
+          }
+        }
       }
     }
-
-
   }
-
+}
   p::selection {
     background: transparent;
   }
