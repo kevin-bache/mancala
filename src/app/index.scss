@@ -24,6 +24,24 @@
        url(../../bower_components/material-design-iconfont/iconfont/MaterialIcons-Regular.ttf) format('truetype');
 }
 
+md-tabs {
+
+
+  md-icon {
+    color: white !important;
+  }
+}
+
+div.pad { 
+padding: 0 2em;
+}
+
+
+md-tabs.md-default-theme, 
+md-tabs .md-tab .md-ripple-container {
+
+}
+
 .logo-icon {
   margin-bottom: -9px;
   max-width: 30px;
