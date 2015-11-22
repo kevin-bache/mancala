@@ -13,7 +13,9 @@
     "material-design-iconfont": "~0.0.2",
     "moment": "~2.10.6",
     "animate.css": "~3.4.0",
-    "angular": "~1.4.2"
+    "angular": "~1.4.2",
+    "md-color-picker": "*",
+    "angular-cookies": "~1.4.8"
   },
   "devDependencies": {
     "angular-mocks": "~1.4.2"
