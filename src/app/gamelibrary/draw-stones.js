@@ -8,7 +8,9 @@
         var format = function (stones) {
             var seeds = "<ul>";
             for(var seed = 0; seed < stones; seed ++) {
-                seeds = seeds.concat("<li class=\"seed\"></li>");
+                var rand = Math.floor(Math.random() * 4) + 1;
+               
+                seeds = seeds.concat("<li class=\"seed seed-rand-"+rand.toString()+"\"></li>");
             }
             seeds = seeds.concat('</ul>');
             return stones === 0 ? '' : seeds + "<div class=\"seeds-number\">" +stones.toString() + "</div>";
@@ -37,12 +39,17 @@
         var format = function (stones) {
            var seeds = "<ul>";
             for(var seed = 0; seed < stones; seed ++) {
-                seeds = seeds.concat("<li class=\"seed\"></li>");
-            }
+                var rand = Math.floor(Math.random() * 4) + 1;
+                seeds = seeds.concat("<li class=\"seed seed-rand-"+rand.toString()+"\"></li>");
+             }
             seeds = seeds.concat('</ul>');
             return stones === 0 ? '' : seeds + "<div class=\"seeds-number\">" +stones.toString() + "</div>";
          };
-
+        if(sound != 'none'){
+            var audio = new Audio('/assets/sounds/' + sound +'.mp3');
+            audio.play();
+        }
+ 
         if (pit === this.pits) {
             this.current_player_store.innerHTML = format(this.mancala.current_store);
         } else if(pit === (this.pits * 2) + 1) {
