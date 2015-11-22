@@ -11,10 +11,28 @@
           return new Array(+count);
         };
         var color = localStorage.getItem('background');
-       
+
         if(color != null) {
           $scope.color = color;
         }
+
+        var sprite1 = localStorage.getItem('sprite1');
+        if(color != null) {
+          $scope.sprite1 = sprite1;
+        }
+        var sprite2 = localStorage.getItem('sprite2');
+        if(sprite2 != null) {
+          $scope.sprite2 = sprite2;
+        }
+        var sprite3 = localStorage.getItem('sprite3');
+        if(sprite3 != null) {
+          $scope.sprite3 = sprite3;
+        }
+        var sprite4 = localStorage.getItem('sprite4');
+        if(sprite4 != null) {
+          $scope.sprite4 = sprite4;
+        }
+
         $scope.pits = (localStorage.getItem('pits')) ? localStorage.getItem('pits') : 6;
         $timeout(function() {
           var game = new Game(Mancala);
