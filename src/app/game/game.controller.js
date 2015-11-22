@@ -10,6 +10,11 @@
         $scope.range = function(count){
           return new Array(+count);
         };
+        var color = localStorage.getItem('background');
+       
+        if(color != null) {
+          $scope.color = color;
+        }
         $scope.pits = (localStorage.getItem('pits')) ? localStorage.getItem('pits') : 6;
         $timeout(function() {
           var game = new Game(Mancala);

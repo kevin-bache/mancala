@@ -3,13 +3,19 @@
 
   angular
     .module('mancala')
-    .controller('TwoController', TwoController);
+      .controller('TwoController', ['$scope','$cookies', TwoController]);
 
   /** @ngInject */
-  function TwoController($scope) {
-  	$scope.done = function() {
+  function TwoController($scope, $cookie) {
+     var color = localStorage.getItem('background');
+     if(color != null) {
+       $scope.color = color;
+      }
+   	$scope.done = function() {
   		localStorage.setItem('chapter', 3);
   	}
+    $scope.$watch('color',function( ) {
+      localStorage.setItem('background', $scope.color);
+    })
   }
-
 })();
