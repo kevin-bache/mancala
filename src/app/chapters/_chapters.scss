@@ -1,0 +1,17 @@
+a.unavailable {
+	opacity: 0.5;
+	background: #ddd;
+	cursor: default;
+}
+
+a.incomplete {
+	img {
+		filter: grayscale(100%);
+	}
+
+	&.available {
+		img {
+			opacity: 0.5;
+		}
+	}
+}

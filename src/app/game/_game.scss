@@ -8,7 +8,7 @@
   background: #534A45;
   display: block;
   overflow: hidden;
-  padding: 2em 4em 6em 4em;
+  padding: 3.0em 4em 6em 4em;
   max-width: 600px;
   min-height: 720px;
   margin: 0 auto;
@@ -30,7 +30,7 @@
 
   &.player-two {
     .seeds-number {
-      transform: translateY(-30px);
+      transform: translateY(-39px);
       color: white;
     } 
   }
@@ -46,6 +46,20 @@
   display: flex;
 }
 
+.seeds-number {
+    width:30px;
+    height: 30px;
+    padding: 6px;
+    border-radius: 100%;
+    background: rgba(0,0,0,0.5);
+    display: block;
+}
+
+.store {
+  .seeds-number {
+    margin: 0 auto;
+  }
+}
 
 
 .row {
@@ -57,15 +71,12 @@
    .seeds-number {
       transform: rotate(-90deg) translateX(-20px);
       position: absolute;
-      width: 60px;
-      left: 2em;
+      left: 3em;
       color: white;
       display: block;
     }
   }
-  .seed-number {
-    text-weight: 500;
-  }
+  
   &.player-two {
   -webkit-flex-direction: column-reverse; 
   flex-direction: column-reverse; 
@@ -75,8 +86,7 @@
     .seeds-number {
       transform: rotate(90deg) translateX(20px);
       position: absolute;
-      width: 60px;
-      right: -2em;
+      right: -1em;
       color: white;
 
     }
@@ -119,12 +129,13 @@
         width: 27px;
         height: 30px;
         background-size: cover;
-
+      display: none;
         position: absolute;
         top: 0px;
         left: 0px;
         
         &:nth-child(1) {
+          display: block;
 
           &.seed-rand-1 {
             transform: rotate(66deg);
@@ -153,6 +164,7 @@
         }
 
         &:nth-child(2) {
+          display: block;
           left: 30px;
           background-position:-25px 0px;
 
@@ -183,6 +195,7 @@
         }
 
         &:nth-child(3) {
+          display: block;
           left: 30px;
           top: 20px;
           background-position:-49px 0px;
@@ -212,6 +225,7 @@
         }
 
         &:nth-child(4) {
+          display: block;
           background-position:-25px 0px;
            &.seed-rand-1 {
             transform: rotate(127deg);
@@ -238,6 +252,7 @@
           }
 
         &:nth-child(5) {
+          display: block;
           background-position:-69px 0px;
            &.seed-rand-1 {
             transform: rotate(12deg);
