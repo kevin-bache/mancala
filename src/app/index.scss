@@ -19,6 +19,16 @@
 }
 
 .max-container {
+    max-width: 640px;
+    margin: 0 auto;
+}
+
+.max-container-480 {
+    max-width: 480px;
+    margin: 0 auto;
+}
+
+.max-container {
     max-width: 600px;
     margin: 0 auto;
 }
