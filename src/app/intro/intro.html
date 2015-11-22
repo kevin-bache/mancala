@@ -1,10 +1,8 @@
 
-<h1>Intro</h1>
-
- <a class = "fixed-play" ng-href = "/#/game" ng-click='done()'><md-button class="md-fab" aria-label="Play game">	<md-icon md-svg-src="assets/images/play.svg"></md-icon></md-button></a>
+<a class = "fixed-play" ng-href = "/#/game" ng-click='done()'><md-button class="md-fab" aria-label="Play game">	<md-icon md-svg-src="assets/images/play.svg"></md-icon></md-button></a>
     
 
-	<md-tabs class="md-primary">
+	<md-tabs md-dynamic-height class="md-primary">
 	  <md-tab class = "md-primary" label="Introduction">
 	<div class = "pad">
 
@@ -17,9 +15,9 @@
 	  </div>
 
 	</md-tab>
-		<div class = "pad">
 
 	  <md-tab class="md-accent" label="Moving pieces">
+	 <div class = "pad">
 	  	  <ol>
 	  	<li>Moving counter-clockwise, the player deposits one of the stones in each hole until the stones run out.</li>
 	  	<li>If you run into your own store, deposit one piece in it. If you run into your opponent's store, skip it.</li>
@@ -29,14 +27,19 @@
 	  </ol>
 </div>
 	</md-tab>
+
 	  <md-tab class="md-accent" label="Objective">
+	  		<div class = "pad">
+
 	    <ol>
 	  	<li>The game ends when all six spaces on one side of the Mancala board are empty.</li>
 	  	<li>The player who still has pieces on his side of the board when the game ends captures all of those pieces.</li>
 	  	<li>ount all the pieces in each store. The winner is the player with the most pieces.</li>
-	 
-	  </ol>
+	 	
+	 	<strong>Ready to play and begin you lessons? Click play below!</strong>
 
+	  </ol>
+</div>
 	</md-tab>
 	</md-tabs>
 

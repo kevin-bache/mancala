@@ -5,6 +5,7 @@ a.unavailable {
 }
 
 a.incomplete {
+	filter: grayscale(100%);
 	img {
 		filter: grayscale(100%);
 	}
@@ -14,4 +15,10 @@ a.incomplete {
 			opacity: 0.5;
 		}
 	}
+}
+
+a.success-item {
+	background-color: #39DCAD;
+	color: #136a50;
+
 }

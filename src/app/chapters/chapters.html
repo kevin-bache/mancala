@@ -1,9 +1,43 @@
+<md-tabs md-dynamic-height  class="md-primary">
+    <md-tab class = "md-primary" label="Hack">
+     <md-card>
+ <img src="assets/images/slide-1.png" class="md-card-image" alt="image caption">
+ <md-card-content class = "slide-1">
+   <p>Making stuff is super fun, and so is Mancala! Try your hand at game design and customize your own version of this classic game.</p>
+ </md-card-content>
+</md-card>
+
+  </md-tab>
+
+    <md-tab class="slide-2 md-accent" label="Design">
+     <md-card>
+ <img src="assets/images/slide-2.png" class="md-card-image" alt="image caption">
+ <md-card-content>
+   <p> Learn the fundamentals of game design through interactive lessons.</p>
+   <p></p>
+ </md-card-content>
+</md-card>
+  </md-tab>
+
+    <md-tab class="md-accent slide-3" label="Success">
+     <md-card>
+ <img src="assets/images/slide-3.png" class="md-card-image" alt="image caption">
+ <md-card-content>
+<p>Earn badges as you progress and play your final custom game with friends!</p>
+ </md-card-content>
+</md-card>
+  </md-tab>
+    <md-tab class="md-accent" label="Go">
+    </md-tab>
+  </md-tabs>   
+
+
    <md-list>
   	<a class = "md-list-custom  " ng-class="active(1)" ng-href="/#/intro">
       <md-list-item class="md-3-line">
         <img src="assets/images/Chpt1-th.png" class="md-avatar" alt="" />
         <div class="md-list-item-text" layout="column">
-          <h3>Chapter 1: Introduction</h3>
+          <h3>Chapter 1: How to play</h3>
           <h4>Rules of the game</h4>
           <p>Learn about the rules of Mancala, a super fun game played in Kenya</p>
         </div>
@@ -16,7 +50,7 @@
         <div class="md-list-item-text" layout="column">
           <h3>Chapter 2: Design</h3>
           <h4>How should your game look?</h4>
-          <p>Color communicates alot. Choose colors you like to make your game beatiful</p>
+          <p>Color communicates alot. Choose colors you like to make your game beautiful</p>
         </div>
       </md-list-item>
   </a>
@@ -26,28 +60,17 @@
         <img src="assets/images/Chpt3-th.png" class="md-avatar" alt="" />
         <div class="md-list-item-text" layout="column">
           <h3>Chapter 3: Variables</h3>
-          <h4>Rules of the game</h4>
-          <p>Learn about the rules of Mancala, a super fun game played in Kenya</p>
+          <h4>Change the rules</h4>
+          <p>Learn how how changing variables impacts gameplay</p>
         </div>
    	  </md-list-item>
     </a>
-  <a class = "md-list-custom " ng-class="active(4)" ng-href="{{chapter >= 4 ? '/#/four' : ''}}">
     <md-divider></md-divider>
-    <md-list-item class="md-3-line">
-        <img src="assets/images/Chpt4-th.png" class="md-avatar" alt="" />
-        <div class="md-list-item-text" layout="column">
-          <h3>Chapter 4: Functions</h3>
-          <h4>Rules of the game</h4>
-          <p>Learn about the rules of Mancala, a super fun game played in Kenya</p>
-        </div>
-      </md-list-item>
-    </a>
-    <md-divider></md-divider>
-  <a class = "md-list-custom " ng-class="active(5)" ng-href="{{chapter >= 5 ? '/#/five' : ''}}">
+  <a class = "md-list-custom " ng-class="active(4)" ng-href="{{chapter >= 4 ? '/#/five' : ''}}">
      <md-list-item class="md-3-line">
         <img src="assets/images/Chpt5-th.png" class="md-avatar" alt="" />
         <div class="md-list-item-text" layout="column">
-          <h3>Chapter 5: Sound</h3>
+          <h3>Chapter 4: Sound</h3>
           <h4>Rules of the game</h4>
           <p>Learn about the rules of Mancala, a super fun game played in Kenya</p>
         </div>
@@ -55,13 +78,11 @@
     </a>
         <md-divider></md-divider>
 
-    <a class = "md-list-custom" ng-class="active(6)" ng-href="{{chapter >= 6 ? '/#/six' : ''}}" >
-     <md-list-item class="md-3-line">
+    <a class = "md-list-custom success-item" ng-class="active(5)" ng-href="{{chapter >= 5 ? '/#/six' : ''}}" >
+     <md-list-item class="md-1-line">
         <img src="assets/images/Chpt6-th.png" class="md-avatar" alt="" />
         <div class="md-list-item-text" layout="column">
-          <h3>Chapter 5: Animation</h3>
-          <h4>Rules of the game</h4>
-          <p>Learn about the rules of Mancala, a super fun game played in Kenya</p>
+          <h3>Chapter 5: Success!</h3>
         </div>
       </md-list-item>
     </a>

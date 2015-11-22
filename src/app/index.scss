@@ -24,16 +24,22 @@
        url(../../bower_components/material-design-iconfont/iconfont/MaterialIcons-Regular.ttf) format('truetype');
 }
 
+ol li {
+  margin-bottom: 0.5em;
+}
+
 md-tabs {
-
-
+  ol {
+  padding: 1em 1em 1em 1em;
+    margin: 1em 1em 1em 1em;
+      }
   md-icon {
     color: white !important;
   }
 }
 
 div.pad { 
-padding: 0 2em;
+  padding: 0em 0em 0em 1em;
 }
 
 
