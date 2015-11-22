@@ -1,5 +1,5 @@
    <md-list>
-  	<a class = "md-list-custom available incomplete" ng-href="/#/intro">
+  	<a class = "md-list-custom  " ng-class="active(1)" ng-href="/#/intro">
       <md-list-item class="md-3-line">
         <img src="assets/images/Chpt1-th.png" class="md-avatar" alt="" />
         <div class="md-list-item-text" layout="column">
@@ -8,7 +8,7 @@
           <p>Learn about the rules of Mancala, a super fun game played in Kenya</p>
         </div>
     </a>
-    <a class = "md-list-custom unavailable incomplete" ng-href="/#/two">
+    <a class = "md-list-custom" ng-class="active(2)" ng-href="/#/two">
       </md-list-item>
       <md-divider ></md-divider>
          <md-list-item class="md-3-line">
@@ -20,7 +20,7 @@
         </div>
       </md-list-item>
   </a>
-  <a class = "md-list-custom unavailable incomplete" ui-sref="three">
+  <a class = "md-list-custom" ng-class="active(3)" ui-sref="three">
     <md-divider></md-divider>
     <md-list-item class="md-3-line">
         <img src="assets/images/Chpt3-th.png" class="md-avatar" alt="" />
@@ -31,7 +31,7 @@
         </div>
    	  </md-list-item>
     </a>
-  <a class = "md-list-custom unavailable incomplete" ng-href="/#/four">
+  <a class = "md-list-custom " ng-class="active(4)" ng-href="/#/four">
     <md-divider></md-divider>
     <md-list-item class="md-3-line">
         <img src="assets/images/Chpt4-th.png" class="md-avatar" alt="" />
@@ -43,7 +43,7 @@
       </md-list-item>
     </a>
     <md-divider></md-divider>
-  <a class = "md-list-custom unavailable incomplete" ng-href="/#/five">
+  <a class = "md-list-custom " ng-class="active(5)" ng-href="/#/five">
      <md-list-item class="md-3-line">
         <img src="assets/images/Chpt5-th.png" class="md-avatar" alt="" />
         <div class="md-list-item-text" layout="column">
@@ -55,7 +55,7 @@
     </a>
         <md-divider></md-divider>
 
-    <a class = "md-list-custom unavailable incomplete" ng-href="/#/six">
+    <a class = "md-list-custom" ng-class="active(6)" ng-href="/#/six">
      <md-list-item class="md-3-line">
         <img src="assets/images/Chpt6-th.png" class="md-avatar" alt="" />
         <div class="md-list-item-text" layout="column">
@@ -67,6 +67,6 @@
     </a>
     <md-divider></md-divider>
     </md-list>
-           <a class = "fixed-play" ng-href = "/#/game"><md-button class="md-fab" aria-label="Eat cake">
+           <a class = "fixed-play" ng-show='show()' ng-href = "/#/game"><md-button class="md-fab" aria-label="Eat cake">
             <md-icon md-svg-src="assets/images/play.svg"></md-icon>
         </md-button></a>

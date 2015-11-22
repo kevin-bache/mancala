@@ -19,7 +19,9 @@
   		localStorage.setItem('sound', $scope.game.sound);
 
   	},true)
-
+     $scope.done = function() {
+      localStorage.setItem('chapter', 6);
+    }
   }
 
 })();

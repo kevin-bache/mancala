@@ -6,7 +6,10 @@
     .controller('FourController', FourController);
 
   /** @ngInject */
-  function FourController() {
+  function FourController($scope) {
+  	 $scope.done = function() {
+      localStorage.setItem('chapter', 5);
+    }
   }
 
 })();
