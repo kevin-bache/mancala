@@ -8,7 +8,7 @@
           <p>Learn about the rules of Mancala, a super fun game played in Kenya</p>
         </div>
     </a>
-    <a class = "md-list-custom" ng-class="active(2)" ng-href="/#/two">
+    <a class = "md-list-custom" ng-class="active(2)" ng-href="{{chapter >= 2 ? '/#/two' : ''}}">
       </md-list-item>
       <md-divider ></md-divider>
          <md-list-item class="md-3-line">
@@ -20,7 +20,7 @@
         </div>
       </md-list-item>
   </a>
-  <a class = "md-list-custom" ng-class="active(3)" ui-sref="three">
+  <a class = "md-list-custom" ng-class="active(3)" ng-href="{{chapter >= 3 ? '/#/three' : ''}}">
     <md-divider></md-divider>
     <md-list-item class="md-3-line">
         <img src="assets/images/Chpt3-th.png" class="md-avatar" alt="" />
@@ -31,7 +31,7 @@
         </div>
    	  </md-list-item>
     </a>
-  <a class = "md-list-custom " ng-class="active(4)" ng-href="/#/four">
+  <a class = "md-list-custom " ng-class="active(4)" ng-href="{{chapter >= 4 ? '/#/four' : ''}}">
     <md-divider></md-divider>
     <md-list-item class="md-3-line">
         <img src="assets/images/Chpt4-th.png" class="md-avatar" alt="" />
@@ -43,7 +43,7 @@
       </md-list-item>
     </a>
     <md-divider></md-divider>
-  <a class = "md-list-custom " ng-class="active(5)" ng-href="/#/five">
+  <a class = "md-list-custom " ng-class="active(5)" ng-href="{{chapter >= 5 ? '/#/five' : ''}}">
      <md-list-item class="md-3-line">
         <img src="assets/images/Chpt5-th.png" class="md-avatar" alt="" />
         <div class="md-list-item-text" layout="column">
@@ -55,7 +55,7 @@
     </a>
         <md-divider></md-divider>
 
-    <a class = "md-list-custom" ng-class="active(6)" ng-href="/#/six">
+    <a class = "md-list-custom" ng-class="active(6)" ng-href="{{chapter >= 6 ? '/#/six' : ''}}" >
      <md-list-item class="md-3-line">
         <img src="assets/images/Chpt6-th.png" class="md-avatar" alt="" />
         <div class="md-list-item-text" layout="column">

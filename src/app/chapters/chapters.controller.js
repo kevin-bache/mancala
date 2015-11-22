@@ -7,6 +7,11 @@
 
   /** @ngInject */
   function ChaptersController($scope) {
+    var chapter = localStorage.getItem('chapter');
+    if(chapter == null) {
+      chapter = 1;
+    }
+    $scope.chapter = chapter;
   	$scope.active = function(number) {
   		var chapter = localStorage.getItem('chapter');
   		if(chapter == null) {
