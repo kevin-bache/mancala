@@ -10,5 +10,4 @@
 
     $log.debug('runBlock end');
   }
-
-})();
+})
